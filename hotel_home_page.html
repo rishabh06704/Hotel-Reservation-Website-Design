@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+  <!-- Sets the character encoding for the document to UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- Configures the viewport for better responsiveness on different devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Website</title>
+  <!-- Links an external CSS file to style the webpage -->
+  <link rel="stylesheet" href="styles.css">
+  <!--- To display icons from the Font Awesome library-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <!--- To import carousel-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="content flex_space">
+        <div class="logo">
+            <img src="images/Logo.png.png" alt=""> 
+        </div>
+        <!-- Div container with the class "navlinks" for links to other sections, a search and menu bar from imported font awesome library-->
+        <div class="navlinks">
+            <ul id="menulist">
+                <li><a href="hotel_home_page.html">home</a></li>
+                <li><a href="hotel_about_us_page.html">About us</a></li>
+                <li><a href="hotel_contact_page.html">Contact</a></li>
+                <li> <button class="primary-btn">BOOK NOW</button></li>
+            </ul>
+        </div>
+    </div>
+  </header>
+
+
+  <section class="home">
+    <!-- Addinf banner imagess to carousel-->
+    <div class="content">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="images/resort_banner1.png" alt="">
+          <div class="text">
+            <h1>Enjoy Your Vacation With Us!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p> 
+            <div class="flex">
+              <a href="hotel_about_us_page.html">
+                <button class="primary-btn">READ MORE</button>
+              </a>
+              <a href="hotel_contact_page.html">
+                <button class="secondary-btn">CONTACT US</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/resort_banner2.png" alt="">
+          <div class="text">
+            <h1>Enjoy Your Vacation With Us!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p> 
+            <div class="flex">
+              <a href="hotel_about_us_page.html">
+                <button class="primary-btn">READ MORE</button>
+              </a>
+              <a href="hotel_contact_page.html">
+                <button class="secondary-btn">CONTACT US</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/resort_banner3.png" alt="">
+          <div class="text">
+            <h1>Enjoy Your Vacation With Us!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p> 
+            <div class="flex">
+              <a href="hotel_about_us_page.html">
+                <button class="primary-btn">READ MORE</button>
+              </a>
+              <a href="hotel_contact_page.html">
+                <button class="secondary-btn">CONTACT US</button>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Imported script src for carousel-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+  <script>
+    // owl carousel script from https://owlcarousel2.github.io/OwlCarousel2/demos/basic.html//
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        }
+      })
+  </script>
+
+<!-- adding a booking grid for users to book rooms-->
+<section id="book" class="book">
+  <div class="container flex_space">
+    <div class="text">
+      <h1> <span>Book </span> Your Rooms </h1>
+    </div>
+    <div class="form">
+      <!-- on submit event, Validating inputs via checkAvailability function-->
+      <form class="grid1" onsubmit="checkAvailability(event)">
+        <input id="arrival-date" type="date" placeholder="Arrival Date" required>
+        <input id="departure-date" type="date" placeholder="Departure Date" required>
+        <input id="adults" type="number" placeholder="PAX: Adults" required>
+        <input id="children" type="number" placeholder="PAX: Children" required>
+        <input type="submit" value="CHECK AVAILABILITY">
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- code added for a hypotheical scenario if rooms are indeed available -->
+<!-- Hidden form section initially -->
+<section id="booking-form" style="display: none;">
+  <h2>Rooms Available, Book Now to Confirm</h2>
+  <form id="confirm-form" onsubmit="submitForm(event)">
+    <input id="first-name" type="text" placeholder="First Name" required>
+    <input id="last-name" type="text" placeholder="last Name" required>
+    <input id="email" type="email" placeholder="Email" required>
+    <input id="phone" type="tel" placeholder="Phone Number" required>
+    <div id="confirmation-details">
+      <label for="confirm-arrival"><input id="confirm-arrival" type="checkbox"> Confirm Arrival Date:</label>
+      <label for="confirm-departure"><input id="confirm-departure" type="checkbox"> Confirm Departure Date:</label>
+      <label for="confirm-adults"><input id="confirm-adults" type="checkbox"> Confirm Number of Adults:</label>
+      <label for="confirm-children"><input id="confirm-children" type="checkbox"> Confirm Number of Children:</label>
+    </div>
+    <button class="primary-butn" id="book-now-btn">BOOK NOW</button>
+    <button class="secondary-butn" onclick="resetForm()">Reset</button>
+  </form>
+</section>
+
+<script>
+// Adding functionality, when user clicks the book now button in the header, or rooms info, the page scrolls down to check avaialbility tab in the page
+  window.addEventListener('DOMContentLoaded', function() {
+      // Get the "BOOK NOW" button from the header
+      var bookNowButton = document.querySelector('.navlinks .primary-btn');
+
+      // Add a click event listener to the button
+      bookNowButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Get the section with the class "book"
+        var bookSection = document.querySelector('.book');
+
+        // Scroll to the bookSection
+        bookSection.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // Get the "BOOK NOW" buttons in the room info section
+      var roomButtons = document.querySelectorAll('.room-info .primary-btn');
+
+      // Add a click event listener to each button
+      roomButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+
+          // Get the section with the class "book"
+          var bookSection = document.querySelector('.book');
+
+          // Scroll to the bookSection
+          bookSection.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+  });
+
+
+
+  function checkAvailability(event) {
+    event.preventDefault();
+
+    // Get the form input values
+    var arrivalDate = document.getElementById('arrival-date').value;
+    var departureDate = document.getElementById('departure-date').value;
+    var adults = document.getElementById('adults').value;
+    var children = document.getElementById('children').value;
+
+    // Get the current date
+    var currentDate = new Date();
+
+    // Check if arrival date is greater than departure date
+    if (arrivalDate > departureDate) {
+      alert("Please select a valid departure date.");
+      return;
+    }
+
+    if (arrivalDate < currentDate.toISOString().slice(0, 10)) {
+      alert("Please select a current or future date for arrival.");
+      return;
+    }
+
+    // Check if the number of adults is negative
+    if (adults < 0) {
+      alert("The number of adults cannot be negative.");
+      return;
+    }
+
+    // Check if the number of children is negative
+    if (children < 0) {
+      alert("The number of children cannot be negative.");
+      return;
+    }
+
+    // Hide the availability form
+    updateConfirmationLabels();
+    document.getElementById('booking-form').style.display = 'block';
+  }
+
+  function updateConfirmationLabels() {
+    // adding functionality such that the book now form takes user input values from the booking grid for the user to confirm and submit
+    var arrivalLabel = document.querySelector('label[for="confirm-arrival"]');
+    var departureLabel = document.querySelector('label[for="confirm-departure"]');
+    var adultsLabel = document.querySelector('label[for="confirm-adults"]');
+    var childrenLabel = document.querySelector('label[for="confirm-children"]');
+
+    var arrivalDate = new Date(document.getElementById('arrival-date').value + 'T00:00:00');
+    var departureDate = new Date(document.getElementById('departure-date').value + 'T00:00:00');
+
+    arrivalLabel.innerHTML = `<input id="confirm-arrival" type="checkbox"> Confirm Arrival Date: ${formatDate(arrivalDate)}`;
+    departureLabel.innerHTML = `<input id="confirm-departure" type="checkbox"> Confirm Departure Date: ${formatDate(departureDate)}`;
+    adultsLabel.innerHTML = `<input id="confirm-adults" type="checkbox"> Confirm Number of Adults: ${document.getElementById('adults').value}`;
+    childrenLabel.innerHTML = `<input id="confirm-children" type="checkbox"> Confirm Number of Children: ${document.getElementById('children').value}`;
+  }
+
+  function formatDate(date) {
+    var options = { day: 'numeric', month: 'long', year: 'numeric' };
+    return date.toLocaleDateString(undefined, options);
+  }
+
+  function submitForm(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Retrieve the form values
+    var firstName = document.getElementById('first-name').value;
+    var lastName = document.getElementById('last-name').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+
+    // Validate and process the form data as needed
+    // ...
+
+    // Reset the form
+    resetForm();
+  }
+
+  function resetForm() {
+    document.getElementById('confirm-form').reset();
+
+    // Reset confirmation labels
+    var arrivalLabel = document.querySelector('label[for="confirm-arrival"]');
+    var departureLabel = document.querySelector('label[for="confirm-departure"]');
+    var adultsLabel = document.querySelector('label[for="confirm-adults"]');
+    var childrenLabel = document.querySelector('label[for="confirm-children"]');
+
+    arrivalLabel.innerHTML = `<input id="confirm-arrival" type="checkbox"> Confirm Arrival Date:`;
+    departureLabel.innerHTML = `<input id="confirm-departure" type="checkbox"> Confirm Departure Date:`;
+    adultsLabel.innerHTML = `<input id="confirm-adults" type="checkbox"> Confirm Number of Adults:`;
+    childrenLabel.innerHTML = `<input id="confirm-children" type="checkbox"> Confirm Number of Children:`;
+
+    // Reset booking grid fields
+    document.getElementById('arrival-date').value = '';
+    document.getElementById('departure-date').value = '';
+    document.getElementById('adults').value = '';
+    document.getElementById('children').value = '';
+
+    // Hide the booking form
+    document.getElementById('booking-form').style.display = 'none';
+  }
+
+
+  // Add an event listener to the button
+  document.getElementById('book-now-btn').addEventListener('click', showConfirmation);
+
+  function showConfirmation() {
+  // Get form values
+  var firstName = document.getElementById('first-name').value;
+  var lastName = document.getElementById('last-name').value;
+
+  // Generating confirmation page content
+  var confirmationContent = `
+    <html>
+    <head>
+      <style>
+        body {
+          background-color: #f2f2f2;
+          text-align: center;
+          padding-top: 100px;
+          font-weight: bold;
+        }
+
+        h1 {
+          color: #333333;
+          font-size: 24px;
+        }
+
+        p {
+          color: #333333;
+          font-size: 18px;
+        }
+
+        img {
+          max-width: 500px;
+          height: auto;
+          margin-bottom: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <img src="images/Logo.png.png" alt="Logo">
+      <h1>Booking Confirmation Page</h1>
+      <p>Thanks for your booking, ${firstName} ${lastName}. Please check your email for payment options.</p>
+    </body>
+    </html>
+  `;
+
+  // Create a new window for the confirmation page
+  var confirmationWindow = window.open('', '_blank');
+
+  // Write the confirmation content to the new window
+  confirmationWindow.document.write(confirmationContent);
+
+  // Close the document in the new window
+  confirmationWindow.document.close();
+}
+</script>
+
+<!-- adding a mini welcome & about us section for users to gain information-->
+<section class="about top">
+  <div class="container-home flex">
+    <div class="left-home">
+      <div class="heading">
+        <h1>WELCOME</h1>
+        <h2>Enchanted Pines Retreat</h2>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <li><a href="hotel_about_us_page.html"><button class="primary-btn">ABOUT US</button></a></li>
+      </div>
+    <div class="right-home">
+      <img src="images/resort_aboutus.png" alt="" class="home-image">
+    </div>
+  </div>
+</section>
+
+
+
+<!-- adding a mini room grid for users to gain information-->
+<section class="room">
+  <div class="container">
+    <div class="heading">
+      <h1>WELCOME</h1>
+      <h2>Explore Our Rooms</h2>
+    </div>
+    <div class="grid2">
+      <div class="room-item">
+        <img src="images/chalet_rooms.png" alt="Chalet Rooms">
+        <div class="room-info">
+          <h3>Chalet</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <button class="primary-btn">BOOK NOW</button>
+        </div>
+      </div>
+      <div class="room-item">
+        <img src="images/lakesidesuites_rooms.png" alt="Lakeside Suits">
+        <div class="room-info">
+          <h3>Lakeside suites</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <button class="primary-btn">BOOK NOW</button>
+        </div>
+      </div>
+      <div class="room-item">
+        <img src="images/largecabins_rooms.png" alt="Large Cabins">
+        <div class="room-info">
+          <h3>Large Cabins</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <button class="primary-btn">BOOK NOW</button>
+        </div>
+      </div>
+      <div class="room-item">
+        <img src="images/rentalhomes.png" alt="Rental units">
+        <div class="room-info">
+          <h3>Rental Units</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <button class="primary-btn">BOOK NOW</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- adding a footer section for the webiste-->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="hotel_home_page.html">Home</a>
+      <a href="hotel_about_us_page.html">About us</a>
+      <a href="hotel_contact_page.html">Contact</a>
+    </div>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p class="copyright">
+      &copy; 2023 Enchanted Pines Retreat. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

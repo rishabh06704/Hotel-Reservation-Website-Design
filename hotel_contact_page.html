@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <!-- Configures the viewport for better responsiveness on different devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--- To display icons from the Font Awesome library-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!-- Bootsrap glyphicon CSS file link to import icons in the webpage -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Links an external CSS file to style the webpage -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <!-- Using the same header section to make the page consistent-->
+    <header>
+        <div class="content flex_space">
+            <div class="logo">
+                <img src="images/Logo.png.png" alt=""> 
+            </div>
+            <!-- Div container with the class "navlinks" for links to other sections, a search and menu bar from imported font awesome library-->
+            <div class="navlinks">
+                <ul id="menulist">
+                    <li><a href="hotel_home_page.html">home</a></li>
+                    <li><a href="hotel_about_us_page.html">about us</a></li>
+                    <li><a href="hotel_contact_page.html">Contact</a></li>
+                    <li><a href="hotel_home_page.html#book" class="primary-btn">BOOK NOW</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- A contact form-->
+    <div class="container-contact">
+        <div class="header-image">
+            <img src="images/contactus.png" alt="Contact US"> 
+        </div>
+        <div class="form-container">
+            <form onsubmit="showConfirmation()">
+              <h1>Contact Form</h1>
+              <input type="text" id="name" placeholder="Enter Name" required>
+              <input type="email" id="email" placeholder="Enter Email" required>
+              <input type="text" placeholder="Enter Subject" required>
+              <textarea placeholder="Enter Message" required></textarea>
+              <button class="secondary-btn" type="submit">Send</button>
+          </form>
+        </div>
+        <div class="contact-details">
+            <h1> Contact-Details</h1>
+          <div class="contact-row">
+            <div class="iconsContainer">
+              <div class="icons">
+                <div class="icon"><i class="bi bi-telephone-fill"></i></div>
+                <span>+1 234 567 890</span>
+                <div class="icon"><i class="bi bi-envelope-at-fill"></i></div>
+                <span>epr@retreat.com</span>
+                <div class="icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <span>123 avenue, Poconos Mountain Region, PA, U.S.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <!-- using the same footer section for the page-->
+    <footer class="footer">
+        <div class="footer-container">
+        <div class="footer-links">
+            <a href="hotel_home_page.html">Home</a>
+            <a href="hotel_about_us_page.html">About us</a>
+            <a href="hotel_contact_page.html">Contact</a>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="copyright">
+            &copy; 2023 Enchanted Pines Retreat. All rights reserved.
+        </p>
+        </div>
+    </footer>
+
+
+    <script>
+        // to show a confirmation message to the user letting them know we got the message
+        function showConfirmation() {
+          // Get form values
+          var userName = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+    
+          // Generating confirmation page content
+          var confirmationContent = `
+            <html>
+            <head>
+              <style>
+                body {
+                  background-color: #f2f2f2;
+                  text-align: center;
+                  padding-top: 100px;
+                  font-weight: bold;
+                }
+    
+                h1 {
+                  color: #333333;
+                  font-size: 24px;
+                }
+    
+                p {
+                  color: #333333;
+                  font-size: 18px;
+                }
+    
+                img {
+                  max-width: 500px;
+                  height: auto;
+                  margin-bottom: 20px;
+                }
+              </style>
+            </head>
+            <body>
+              <img src="images/Logo.png.png" alt="Logo">
+              <h1>We hear you!</h1>
+              <p>Thanks for your message, ${userName}! Expect to hear back from us soon!</p>
+            </body>
+            </html>
+          `;
+    
+          // Create a new window for the confirmation page
+          var confirmationWindow = window.open('', '_blank');
+    
+          // Write the confirmation content to the new window
+          confirmationWindow.document.write(confirmationContent);
+    
+          // Close the document in the new window
+          confirmationWindow.document.close();
+        }
+      </script>
+</body>
+</html>

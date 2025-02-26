@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: 'DM Serif Display', serif;
+}
+
+/* Heading Styles */
+h1, h2 {
+  font-family: serif;
+  font-weight: 400;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+}
+
+/* List Styles */
+li {
+  list-style: none;
+}
+
+/* Flex Styles */
+.flex {
+  display: flex;
+}
+
+/*To apply flexbox properties to an element with the flex_space class to be evenly distributed*/
+.flex_space {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* To style the button element*/
+button{
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* to style the elements with the primary-btn class*/
+.primary-btn {
+  padding: 15px 40px;
+  background: #66c70b;
+  font-weight: bold;
+  color: azure;
+}
+
+/* to style the elements with the secondary-btn class*/
+.secondary-btn {
+  padding: 15px 40px;
+  background: rgb(7, 6, 5);
+  border: 2px solid black;
+  font-weight: bold;
+  color: rgb(250, 249, 249);
+}
+
+/* to style the elements with the primary-butn class*/
+.primary-butn {
+  padding: 15px 40px;
+  background: #66c70b;
+  font-weight: bold;
+  color: azure;
+}
+
+/* to style the elements with the secondary-butn class*/
+.secondary-butn {
+  padding: 15px 40px;
+  background: rgb(7, 6, 5);
+  border: 2px solid black;
+  font-weight: bold;
+  color: rgb(250, 249, 249);
+}
+
+
+
+/* to add a simple pulse animation to buttons*/
+  /* Define the pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the pulse animation to the buttons */
+.primary-btn,
+.secondary-btn {
+  animation: pulse 1.5s infinite;
+}
+
+/* to style the elements with the container class */
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+
+/*To style the <header> element*/
+header {
+  height: 10vh;
+  line-height: 10vh;
+  padding: 0 20px;
+}
+
+/* to adjust the logo according to the page*/
+header img{
+  margin: 30px 0;
+  margin-top: 1%;
+  width: 400px;
+}
+
+/* To style <ul> elements within the header by setting them as inline-block, to places the list items side by side*/
+header ul {
+  display: inline-block;
+}
+
+/*This block styles the <li> elements within the header by setting them to display as inline-block and applying text transformation to uppercase*/
+header ul li{
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+
+/*To style the <a> elements in the header section list with color, margin, and transition effect*/
+header ul li a{
+  color: black;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+/* To style the <a> elements with a hover color*/
+header ul li a:hover{
+  color: #66c70b;
+}
+
+/* To style <i> elements within the header by adding margin on the left and right sides */
+header i{
+  margin: 0 30px;
+}
+
+/* Header button style*/
+header button{
+  padding: 20px 40px;
+}
+
+/* To hide hides <span> elements within the header with the class "navlinks"*/
+header .navlinks span{
+  display: none;
+}
+
+
+/*__________header____________*/
+/*___________home___________*/
+.home{
+  height: 100vh;
+  color: aliceblue;
+}
+
+
+/* To style the carousel image*/
+.home img{
+  width: 50%;
+  height: 90vh;
+  object-fit: cover;
+
+}
+
+/* To adjust the carousel text accroding to page*/
+.home .text{
+  position: absolute;
+  top: 75%;
+  left: 5%;
+}
+
+/* To adjust the carousel <h1> text accroding to its relative button and text*/
+.home .text h1{
+  font-size: 20px;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 500;
+}
+
+.home p{
+  margin: 5px 0;
+}
+
+/* To style the carousel button to add space*/
+.home button{
+  margin-right: 10px;
+}
+
+/*adding carousel navigation and its styesles*/
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  position: absolute;
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: #fff;
+}
+
+.owl-nav .owl-prev {
+  left: 0;
+}
+
+.owl-nav .owl-next {
+  right: 0;
+}
+
+/*___________home___________*/
+/*_________Adding a bookings grid________*/
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  align-items:first baseline;
+  padding: 0 0; /* Add padding to create the desired space */
+}
+
+/* to style the input elements in the booking input grid */
+input {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+/* to add padding, color, and background to arrival, departure, children, adults elements in the input grid */
+.book {
+  padding: 10px 0;
+  background: #c5c5c5;
+  color: #020202;
+}
+
+h1 {
+  font-family: serif;
+}
+
+/* to adjust the font size of "Book your rooms" */
+.book h1 {
+  font-size: 28px;
+  margin: 15px;
+}
+
+/* To add a highlight color to the h1 */
+.book h1 span {
+  color: #2b08f0;
+}
+
+/* to adjust the individual elements in the booking input grid */
+.book input {
+  padding: 20px;
+}
+
+/* to add a highlight color for the last element in the booking input grid */
+.book input:nth-last-child(1) {
+  background: #66c70b;
+  color: #fff;
+}
+
+/*___________home___________*/
+/*___________styling the about us section on home page___________*/
+.left-home, .right-home {
+  width: 100%;
+  padding: 50px;
+}
+
+.home-image {
+  width: 750px; /* Adjust the width as needed */
+  height: auto; /* The height will adjust automatically to maintain aspect ratio */
+}
+
+.top{
+  margin-top: 80px;
+}
+
+/*adding a top margin*/
+.mtop{
+  margin-top: 40px;
+}
+
+/*styling the h1 heading section by reducing opacity*/
+.heading h1 {
+  font-size: 85px;
+  font-weight: 500;
+  opacity: 0.1;
+  font-family: 'DM Serif Display', serif;
+  position: absolute;
+  top: 5px;
+}
+
+/*styling the h2 heading section*/
+.heading h2 {
+  margin: 30px 0;
+  font-size: 45px;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+}
+
+/*adding top margin to the h1 heading section*/
+.about .heading h1 {
+  top: 55px;
+}
+
+/*adjusting the position of the about class*/
+.about {
+  position: relative;
+}
+
+.about .left {
+  margin-top: 10px;
+}
+
+.about p {
+  font-size: 15px;
+}
+
+/*adding margin to button in the class*/
+.about button {
+  margin: 30px 0;
+}
+
+/*___________home___________*/
+/* Styling for the hidden booking form section */
+#booking-form {
+  margin-top: 20px;
+  margin-left: 160px;
+  width: 85%;
+  background-color: #c5c5c5;
+}
+
+#booking-form h2 {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+#booking-form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1px;
+}
+
+#booking-form input,
+#booking-form label {
+  display: block;
+  padding: 10px;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+}
+
+#booking-form input[type="checkbox"],
+#booking-form label {
+  display: inline-flex;
+  align-items: center;
+}
+
+#booking-form label {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+#booking-form button {
+  margin-top: 10px;
+
+}
+
+
+
+/*___________home___________*/
+/*___________styling the room section on home page___________*/
+
+.room {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.room .heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading h1 {
+  margin: 30px 0;
+  font-size: 45px;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+}
+
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.room-item {
+  position: relative;
+}
+
+.room-item img {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+}
+
+.room-info {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  padding: 50px;
+  box-sizing: border-box;
+  color: #fff;
+  transition: opacity 0.3s;
+  text-align: center;
+}
+
+.room-item:hover .room-info {
+  opacity: 1;
+}
+
+.room-info h3 {
+  margin-top: 10;
+}
+
+.room-info p {
+  margin-bottom: 10px;
+}
+
+/*___________home___________*/
+/*___________footer section___________*/
+.footer {
+  background-color: #c5c5c5;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #333;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links a {
+  color: #333;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links i {
+  font-size: 18px;
+}
+
+.footer p {
+  color: #888;
+  margin-top: 10px;
+}
+
+/*___________contact Us___________*/
+/*___________to style the ___________*/
+
+.container-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.header-image {
+  background-size: cover;
+  background-position: center;
+  height: 20%;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 20%;
+}
+
+.form-container > form {
+  width: 200%;
+  margin: 0 auto;
+}
+
+.form-container h1{
+  margin: 2px 0;
+  font-size: 35px;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  text-align: center;
+  color: #f9f9f9;
+}
+
+.form-container  input,
+.form-container label {
+  display: block;
+  padding: 10px;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.form-container button {
+  padding: 10px 20px;
+  background-color: #66c70b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 40%;
+}
+
+.contact-details {
+  padding: 100px;
+  margin-top: 130px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-details h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.contact-details .contact-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.iconsContainer {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  align-items:center;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+
+/*___________About Us Page___________*/
+.about-image {
+  width: 700px; /* Adjust the width as needed */
+  height: auto; /* The height will adjust automatically to maintain aspect ratio */
+}
+
+.container-about-top {
+  display: flex;
+  margin-left: 5%;
+  padding-right: 5%;
+  align-items: center; 
+}
+
+.container-about-middle {
+  display:flexbox;
+  padding-left: 5%;
+  margin-right: 5%;
+  align-items: center; 
+}
+
+.left-about {
+  flex: 1;
+  padding-right: 5%
+}
+
+.right-about {
+  flex: 1;
+  padding-left: 2%;
+}
+
+
+
